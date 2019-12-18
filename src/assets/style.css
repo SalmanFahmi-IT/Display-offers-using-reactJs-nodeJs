@@ -1,0 +1,25 @@
+body{
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    background-image: url('../assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 9rem 0 0 0;
+}
+ul{
+    display: flex;
+}
+ul li{
+    margin: 0 4rem;
+    list-style: none;
+}
+ul li a{
+    font-size: 22px;
+    color: #fff;
+}

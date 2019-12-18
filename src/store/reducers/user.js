@@ -1,9 +1,8 @@
 /**
  * UserReducer
  */
-const initialState = {
-
-};
+import user from '../../data/user';
+const initialState = user;
 function userReducer(state = initialState, action) {
     switch (action.type) {
       default:

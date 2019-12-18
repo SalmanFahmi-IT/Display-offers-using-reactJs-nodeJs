@@ -1,9 +1,8 @@
 /**
  * OffersReducer
  */
-const initialState = {
-
-};
+import offers from '../../data/offers';
+const initialState = offers;
 function offersReducer(state = initialState, action) {
     switch (action.type) {
       default:
