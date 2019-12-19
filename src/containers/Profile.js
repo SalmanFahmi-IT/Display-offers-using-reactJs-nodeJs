@@ -4,18 +4,18 @@ import OfferList from './OfferList';
 import { UserProfil } from '../components';
 
 function Profile() {
-    const {user, userOffers} = useSelector( state =>  ({
+    const {user, offers} = useSelector( state =>  ({
         user: state.user,
-        userOffers: state.userOffers
+        offers: state.offers.filter(offer => offer.applied === true)
     }));
     return(
         <React.Fragment>
             <UserProfil user={user} />
             <div className='title mb-2'>
                 Les offres que j'ai postulé 
-                <small>( {userOffers.length} offres trouvées )</small>
+                <small>( {offers.length} offres trouvées )</small>
             </div>
-            <OfferList data={ userOffers }/>
+            <OfferList data={ offers }/>
         </React.Fragment>
     );
 };

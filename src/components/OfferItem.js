@@ -2,14 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import { Button } from '../components';
 import offerImg from '../assets/images/logo.png';
-import { useDispatch } from 'react-redux';
 
-function OfferItem ({ Item = {} }) {
-    const dispatch = useDispatch();
-    const apply = item => {
-        const appliedItem = { ...item, applied: true };
-        dispatch({type: 'ADD_OFFER_TO_USER', item: appliedItem})
-    };
+function OfferItem ({ Item = {}, apply }) {
     return(
         <div className='offer-box'>
             <div className='offer-img'>
