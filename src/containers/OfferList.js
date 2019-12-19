@@ -1,7 +1,7 @@
 import React from 'react';
 import { OfferItem } from '../components';
 
-function OfferList ({ data }) {
+function OfferList ({ data }) {    
     return(
         <>
             {

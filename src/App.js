@@ -10,14 +10,16 @@ function App() {
       <Header />
       <Nav />
       <div className="container">
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/Profile">
-            <Profile />
-          </Route>
-        </Switch>
+        <div className='main'>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/Profile">
+              <Profile />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );
