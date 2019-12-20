@@ -5,8 +5,8 @@ import { UserProfil } from '../components';
 
 function Profile() {
     const {user, offers} = useSelector( state =>  ({
-        user: state.user,
-        offers: state.offers.filter(offer => offer.applied === true)
+        user: state.user.userInfo,
+        offers: state.user.offers
     }));
     return(
         <React.Fragment>
