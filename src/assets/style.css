@@ -57,7 +57,6 @@ body{
     box-shadow: 1px -6px 3px -4px #adacac;
     padding: 10px 20px;
     font-size: 12px;
-    width: 100%;
 }
 .offer-box > div{
     margin:1rem 2.5rem;
@@ -105,4 +104,19 @@ body{
 }
 .content > div{
     margin:1rem 1rem;
+}
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+}
+.pagination button{
+    padding: 4px 8px;
+    cursor: pointer;
+    margin: 1px;
+    background: #fff;
+    border: 1px solid rgb(206, 206, 206);
+}
+.active-page{
+    background: #0077e2 !important;
+    color: #fff !important;
 }
