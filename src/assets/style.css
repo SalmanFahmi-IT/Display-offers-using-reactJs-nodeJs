@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+body{
+    font-family: sans-serif;
+}
+.container{
+    padding: 0 12%;
+}
+.main{
+    padding: 3rem 0;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.navbar{
+    background-image: url('../assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 9rem 0 2rem 0;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    margin: 0 2rem 0 0;
+    list-style: none;
+}
+.navbar ul li a{
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+}
+.active{
+    border-bottom: 2px solid #fff;
+    padding: 0 0 1rem 0;
+}
+.title{
+    color: #385b95;
+    font-weight: 600;
+}
+.title small{
+    color: #385b95;
+    font-weight: 100;
+}
+.offer-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #aba9a9;
+    border-radius: 6px;
+    margin: 10px 0;
+    box-shadow: 1px -6px 3px -4px #adacac;
+    padding: 10px 20px;
+    font-size: 12px;
+}
+.offer-box > div{
+    margin:1rem 2.5rem;
+}
+
+.offer-img img {
+    border-radius: 50%;
+    border: 1px solid #348fe1;
+    width: 100px;
+    height: 100px;
+}
+.offer-title{
+    color: #385b95;
+    font-weight: 500;
+}
+.offer-subtitle{
+    color: #348fe1;
+}
+.offer-description{
+    color: #868484;
+    text-align: justify;
+}
+.user-box{
+    display: flex;
+}
+.user-box > div{
+    margin: 1rem 1rem 1rem 0;
+}
+.user-img img{
+    border-radius: 10px;
+}
+.user-content{
+    color: #5f5e5e;
+}
+.mb{
+    margin-bottom: 0.5rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content > div{
+    margin:1rem 1rem;
+}
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+}
+.pagination button{
+    padding: 4px 8px;
+    cursor: pointer;
+    margin: 1px;
+    background: #fff;
+    border: 1px solid rgb(206, 206, 206);
+}
+.active-page{
+    background: #0077e2 !important;
+    color: #fff !important;
+}
