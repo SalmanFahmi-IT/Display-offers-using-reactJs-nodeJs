@@ -1,8 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { OfferItem } from '../components';
+import { applyOffer } from '../store/userOffersActions'
 
-function Numbers({ numberOfPages=0, goToPage, currentPage }){
+function PageNumbers({ numberOfPages, goToPage, currentPage }){
     let pages = [];
     for(let i = 1; i <= numberOfPages; i++){
         let active = i === currentPage ? 'active-page' : '';
@@ -15,8 +17,16 @@ function Numbers({ numberOfPages=0, goToPage, currentPage }){
     }
     return pages;
 }
+PageNumbers.propTypes = {
+    numberOfPages: PropTypes.number, 
+    goToPage: PropTypes.func, 
+    currentPage: PropTypes.number
+};
+PageNumbers.defaultProps = {
+    numberOfPages: 0
+};
 
-function OfferList ({ data = [] }) {    
+function OfferList ({ data }) {    
     const dispatch = useDispatch();
     const [pageList, setPageList] = React.useState([]);
     const [currentPage, setCurrentPage] = React.useState(1);
@@ -41,10 +51,7 @@ function OfferList ({ data = [] }) {
     
     const nextPage = () => setCurrentPage(currentPage + 1);
     const prevPage = () => setCurrentPage(currentPage - 1);
-
-    const apply = item => {
-        dispatch({type: 'APPLY_OFFER', item });
-    };
+    const apply = item => dispatch(applyOffer(item));
     
     return(
         <>
@@ -59,7 +66,7 @@ function OfferList ({ data = [] }) {
             }
             <div className='pagination'>
                 <button onClick={prevPage} disabled={currentPage === 1}>{'<'}</button>
-                <Numbers 
+                <PageNumbers 
                     numberOfPages={numberOfPages} 
                     goToPage={setCurrentPage} 
                     currentPage={currentPage}
@@ -69,6 +76,13 @@ function OfferList ({ data = [] }) {
         </>
     );
     
+};
+
+OfferList.propTypes = {
+    data: PropTypes.array
+};
+OfferList.defaultProps = {
+    data: []
 };
 
 export default OfferList;

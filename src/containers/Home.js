@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import OfferList from './OfferList';
-import { fetchOffers } from '../store/actions';
+import { fetchOffers } from '../store/offersActions';
 
 function Home() {
     const dispatch = useDispatch();
